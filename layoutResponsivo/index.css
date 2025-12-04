@@ -1,0 +1,160 @@
+/* reset simples */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+header, main, footer{
+    padding: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    align-items: center;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#fechar-menu {
+    display: none;
+}
+.menu-container{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.menu ul a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-login{
+    background-color:#fff;
+     color: #222;
+    padding: 7px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#destaque{
+    display: flex;
+    gap: 20px;
+     flex-wrap: wrap; 
+    margin-bottom: 20px;
+}
+
+.bloco-destaque{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(33.33% - 20px);
+    min-width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+.bloco-banner{
+     background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.rodape{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rodape div{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33.33%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+footer{
+        background-color: #ddd;
+        margin-top: 20px;
+}
+
+footer p{
+    text-align: center;
+}
+
+.hamburguer{
+    display: none;
+}
+
+.menu .btn-login{
+    display: none;
+}
+
+@media(max-width:768px){
+
+    #fechar-menu {
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+    .menu ul{
+        flex-direction: column;
+       
+    }
+    .menu{
+        position: fixed;
+        z-index: 999;
+        background-color: #333;
+        left: -260px;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        padding-top: 60px;
+        padding-left: 30px;
+        transition: left 0.3s ease;
+    }
+
+    .menu .btn-login{
+        margin-top: 50px;
+        display: block;
+        width: 200px;
+    }
+
+    header .btn-login{
+        display: none;
+    }
+    .hamburguer{
+        display: block;
+        font-size: 20px;
+        background: none;
+        color: #fff;
+        border: none;
+    }
+    .menu-show{
+        left: 0;
+    }
+  
+}
